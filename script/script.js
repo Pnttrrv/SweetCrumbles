@@ -13,6 +13,7 @@ const infofud = document.querySelector('.product .info.fud');
 const infotar = document.querySelector('.product .info.tar');
 const infopc = document.querySelector('.product .info.pc');
 const infobun = document.querySelector('.product .info.pk');
+// const produkTilt = document.querySelectorAll('#products .product');
 
 // hamburger menu
 toggle.addEventListener('click', function () {
@@ -53,3 +54,32 @@ info.forEach((inpo) => {
     inpo.classList.remove('show-details');
   });
 });
+
+// if (window.matchMedia('(max-width: 1024px)').matches) {
+//   produkTilt.forEach((produk) => {
+//     produk.setAttribute('data-tilt', null);
+//   });
+// } else {
+//   produkTilt.forEach((produk) => {
+//     produk.removeAttribute('data-tilt', null);
+//   });
+// }
+
+function handleResize() {
+  const windowWidth = window.innerWidth;
+  const produkTilt = document.querySelectorAll('.product');
+
+  if (windowWidth >= 1024) {
+    produkTilt.forEach((produk) => {
+      produk.setAttribute('data-tilt', null);
+    });
+  } else {
+    produkTilt.forEach((produk) => {
+      produk.removeAttribute('data-tilt', null);
+    });
+  }
+}
+
+handleResize();
+
+window.addEventListener('resize', handleResize);

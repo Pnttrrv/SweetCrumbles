@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Landing Page</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,23 +12,26 @@
 
     <!-- icons -->
     <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+
+    <!-- aos -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body>
     <div class="container">
       <header>
         <div class="header">
           <div class="hero">
-            <h2 class="heading">Bestseller</h2>
-            <p class="sub-heading">Coklat Dubai</p>
+            <h2 class="heading" data-aos="fade-right" data-aos-once="true">Bestseller</h2>
+            <p class="sub-heading" data-aos="fade-right" data-aos-delay="300" data-aos-once="true">Coklat Dubai</p>
           </div>
 
           <div class="features feature1">
-            <h4 class="price">IDR 30K</h4>
-            <p class="item">Burnt Cheese Tart</p>
+            <h4 class="price" data-aos="fade-left" data-aos-once="true">IDR 30K</h4>
+            <p class="item" data-aos="fade-left" data-aos-delay="200" data-aos-once="true">Burnt Cheese Tart</p>
           </div>
           <div class="features feature2">
-            <h4 class="price">IDR 115K</h4>
-            <p class="item">Brownies</p>
+            <h4 class="price" data-aos="fade-left" data-aos-once="true">IDR 115K</h4>
+            <p class="item" data-aos="fade-left" data-aos-delay="200" data-aos-once="true">Brownies</p>
           </div>
         </div>
       </header>
@@ -47,7 +50,7 @@
           <li><a href="#contact" class="ls-menu">Contact</a></li>
         </ul>
       </nav>
-
+      <!-- Products Section -->
       <section class="products" id="products">
         <h2 class="prod-heading">Products</h2>
 
@@ -105,17 +108,17 @@
           </div>
         </div>
       </section>
-
+      <!-- Contact Section -->
       <section class="contact" id="contact">
         <h2 class="contact-heading">Contact</h2>
-        <div class="insta">
+        <div class="insta" data-aos="flip-left" data-aos-once="true">
           <a href="" class="icon"
             ><i class="ph ph-instagram-logo"></i>
             <h3 class="icon-subheading">Instagram</h3></a
           >
         </div>
 
-        <div class="insta">
+        <div class="insta" data-aos="flip-left" data-aos-delay="200" data-aos-once="true">
           <a href="" class="icon">
             <i class="ph ph-whatsapp-logo"></i>
             <h3 class="icon-subheading">Whatsapp</h3>
@@ -130,6 +133,19 @@
         </div>
       </footer>
     </div>
-    <script src="script.js"></script>
+    <script src="script/script.js"></script>
+    <!-- aos -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <!-- tilt js -->
+    <script type="text/javascript" src="script/vanilla-tilt.js"></script>
+    <script>
+      VanillaTilt.init(document.querySelector('.your-element'), {
+        max: 25,
+        speed: 400,
+      });
+    </script>
   </body>
 </html>
