@@ -311,12 +311,10 @@ nav .brand-name {
 
 .contact {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 10px;
   justify-items: center;
   margin-bottom: 150px;
-  place-content: center;
-  place-items: center;
 }
 
 .contact .contact-heading {
