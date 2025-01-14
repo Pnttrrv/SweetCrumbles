@@ -55,31 +55,28 @@ info.forEach((inpo) => {
   });
 });
 
-// if (window.matchMedia('(max-width: 1024px)').matches) {
-//   produkTilt.forEach((produk) => {
-//     produk.setAttribute('data-tilt', null);
-//   });
-// } else {
-//   produkTilt.forEach((produk) => {
-//     produk.removeAttribute('data-tilt', null);
-//   });
-// }
-
 function handleResize() {
   const windowWidth = window.innerWidth;
   const produkTilt = document.querySelectorAll('.product');
-
+  let i = 0;
+  let j = 100;
   if (windowWidth >= 1024) {
+    //adjust breakpoint as needed
     produkTilt.forEach((produk) => {
-      produk.setAttribute('data-tilt', null);
+      //i use forEach because i'm using queryselectorAll
+      produk.setAttribute('data-tilt', null); //adding data-tilt to Attribute
     });
   } else {
     produkTilt.forEach((produk) => {
-      produk.removeAttribute('data-tilt', null);
+      produk.removeAttribute('data-tilt', null); //remove data-tilt from Attribute
+      produk.setAttribute('data-aos', 'fade-up');
+      produk.setAttribute('data-aos-delay', `${i}`);
+      produk.setAttribute('data-aos-once', 'true');
+      i = i + j;
     });
   }
 }
 
-handleResize();
+handleResize(); //initial check on page load
 
-window.addEventListener('resize', handleResize);
+window.addEventListener('resize', handleResize); //eventListener for window resize

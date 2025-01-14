@@ -3,6 +3,7 @@
   --brand-color: #bb1b1f;
   --navbg-color: #f8fcff;
   --text-color: #c31628;
+  --shadow: 0 2px 5px rgb(0 0 0/0.8);
 }
 * {
   margin: 0;
@@ -200,7 +201,7 @@ nav .brand-name {
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
   justify-items: center;
-  margin-bottom: 50px;
+  margin-bottom: 70px;
 }
 
 .products .prod-heading {
@@ -310,16 +311,18 @@ nav .brand-name {
 
 .contact {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   gap: 10px;
   justify-items: center;
   margin-bottom: 150px;
+  place-content: center;
+  place-items: center;
 }
 
 .contact .contact-heading {
   grid-column: 1/-1;
   color: var(--text-color);
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .contact .insta {
@@ -392,7 +395,7 @@ footer .text span {
 
   .hero > * {
     display: block;
-    background-color: rgba(147, 184, 183, 0.5);
+    text-shadow: var(--shadow);
     border-radius: 3px;
     color: white;
     padding: 5px;
